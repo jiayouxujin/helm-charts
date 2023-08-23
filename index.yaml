@@ -3,6 +3,16 @@ entries:
   kvrocks-operator:
   - apiVersion: v1
     appVersion: 2.25.0
+    created: "2023-08-23T07:33:32.017969336Z"
+    description: A Helm chart for kvrocks operator
+    digest: 7a54a57eca0fd0f51fc9d0f0f2ec2d62dd90ad2d4cd5b77bb13fe3f52d17e42f
+    name: kvrocks-operator
+    type: application
+    urls:
+    - https://github.com/jiayouxujin/helm-charts/releases/download/kvrocks-operator-0.1.1/kvrocks-operator-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: 2.25.0
     created: "2023-08-23T07:14:23.52172981Z"
     description: A Helm chart for kvrocks operator
     digest: 6c991d87407423348e76d328c1ba0998f6b24eb3369322f539fbac72c53ef16b
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/jiayouxujin/helm-charts/releases/download/kvrocks-operator-0.1.0/kvrocks-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-23T07:14:23.52174021Z"
+generated: "2023-08-23T07:33:32.017986431Z"
