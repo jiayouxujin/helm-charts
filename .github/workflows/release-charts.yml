@@ -15,25 +15,17 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Configure Git
-      run: |
-        git config user.name "$GITHUB_ACTOR"
-        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
     - name: Install Helm
       uses: azure/setup-helm@v3
 
-    # New step to add Helm repo
     - name: Add Helm Repositories
       run: |
         helm repo add openkruise https://openkruise.github.io/charts/
-        helm repo update
 
-    # Build dependencies
     - name: Build chart dependencies
       run: |
         cd charts/kvrocks-operator
-        helm dependency build
+        helm dependency update
 
     - name: Run chart-releaser
       uses: helm/chart-releaser-action@v1.5.0
