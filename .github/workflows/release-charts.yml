@@ -23,7 +23,13 @@ jobs:
     - name: Install Helm
       uses: azure/setup-helm@v3
 
-    # New step: Build dependencies
+    # New step to add Helm repo
+    - name: Add Helm Repositories
+      run: |
+        helm repo add openkruise https://openkruise.github.io/charts/
+        helm repo update
+
+    # Build dependencies
     - name: Build chart dependencies
       run: |
         cd charts/kvrocks-operator
